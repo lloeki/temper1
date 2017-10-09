@@ -101,6 +101,7 @@ class Temper {
             } finally {
                 dev.close();
                 hid_mgr.release();    
+                System.exit(0);
             }
         } catch(IOException e) {
             e.printStackTrace();
