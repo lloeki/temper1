@@ -31,7 +31,7 @@ class Temper {
     static final int USAGE_ID = 1;
     static final int BUFSIZE = 2048;
 
-    static final int READ_UPDATE_DELAY_MS = 1000;
+    static final int READ_UPDATE_DELAY_MS = 100;
 
     public static void main(String[] args) {
         ClassPathLibraryLoader.loadNativeHIDLibrary();
