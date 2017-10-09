@@ -1,16 +1,16 @@
 // from https://www.igorkromin.net/index.php/2013/02/16/using-java-hidapi-on-os-x-to-read-temperature-from-the-temper1-sensor/
 //
 // HIDDeviceInfo [path=USB_0c45_7401_0x7f8733426a10,
-//   vendor_id=3141, 
-//   product_id=29697, 
-//   serial_number=, 
-//   release_number=1, 
-//   manufacturer_string=RDing, 
-//   product_string=TEMPer1V1.2, 
-//   usage_page=65280, 
-//   usage=1, 
+//   vendor_id=3141,
+//   product_id=29697,
+//   serial_number=,
+//   release_number=1,
+//   manufacturer_string=RDing,
+//   product_string=TEMPer1V1.2,
+//   usage_page=65280,
+//   usage=1,
 //   interface_number=-1]
-// HIDDeviceInfo [path=USB_0c45_7401_0x7f8733426c90, 
+// HIDDeviceInfo [path=USB_0c45_7401_0x7f8733426c90,
 //   vendor_id=3141,
 //   product_id=29697,
 //   serial_number=,
@@ -78,7 +78,7 @@ class Temper {
 
             dev = hid_mgr.openByPath(found.getPath());
             byte[] temp = new byte[] {
-                (byte)0x01, (byte)0x80, (byte)0x33, (byte)0x01, 
+                (byte)0x01, (byte)0x80, (byte)0x33, (byte)0x01,
                     (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x00
             };
 
@@ -100,7 +100,7 @@ class Temper {
                 }
             } finally {
                 dev.close();
-                hid_mgr.release();    
+                hid_mgr.release();
                 System.exit(0);
             }
         } catch(IOException e) {
